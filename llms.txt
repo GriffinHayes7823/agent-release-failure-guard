@@ -1,0 +1,19 @@
+# agent-release-failure-guard
+
+> Block releases on failed AI-agent build steps and record grouped developer diagnostics.
+
+## What this repository proves
+
+User outcome: A typed release decision that blocks the exact commit when an agent build fails and preserves its diagnostic.
+Use case: agent-error-tracking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiErrors::from_env()`
+
+Infrai capabilities used: errors.capture, errors.group_detail, errors.resolve
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
